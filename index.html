@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Twenty One Plus</title>
+		<style>
+			.container {
+				text-align: center;
+			}
+			.centered-div {
+				display: inline-block;
+				/* You can also set a width for the centered div if needed */
+			}
+			html, body {
+				background: black;
+				height: 100%;
+				margin: 0;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
+		</style>
+		<script>
+			function getPassword(){
+				if(document.getElementById('answer').value.length!=4){
+					alert('The number should be 4 digits. Try again quickly.');
+				}
+				else if(document.getElementById('answer').value=='1989'){
+					alert('The password is 000000.');
+				}
+				else{
+					alert('You have to enter the year Taylor was born.');
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<div class="container">
+			<div class="centered-div">
+				<table>
+					<tr>
+						<td>
+							<label style="color: white; font-size: 50px;">
+								Just enter a number
+							</label>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<label><pre></pre></label>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<input id="answer" type="number" style="width: 70px; height: 50px; font-size: 20px;"/>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<label><pre></pre></label>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<button id="button1" onclick="getPassword();" style="width: 200px; height: 90px; border: 4px solid gray; background: white; color: black; font-size: 15px;">Get Password</button>
+						</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+	</body>
+</html>
